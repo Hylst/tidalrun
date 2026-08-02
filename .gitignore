@@ -1,0 +1,51 @@
+# Deps & build
+node_modules/
+dist/
+dist-ssr/
+*.local
+.vite/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Secrets — ne JAMAIS commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+secrets.json
+credentials.json
+.npmrc
+.netrc
+
+# Fichiers d'agents IA — hors du repo public
+CLAUDE.md
+CLAUDE.local.md
+AGENTS.md
+GEMINI.md
+.claude/
+.opencode/
+.cursor/
+.cursorrules
+.windsurfrules
+.github/copilot-instructions.md
+.aider*
+.continue/
+.roo/
+.clinerules
+.mcp.json
+dev_rules.md
+prompts/
+*.prompt.md
+docs/superpowers/
+
+# OS & editeurs
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
