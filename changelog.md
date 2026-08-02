@@ -12,6 +12,16 @@
 - L'ensemble de l'interface existante (Rules, Boat yard, HUD) reste en anglais, deja note
   dans `todo.md` comme ecart a la regle du depot (toute l'UI doit etre en francais) ; hors
   perimetre de ce correctif ponctuel.
+- **Ce dossier source n'avait jamais son propre depot Git.** `.git` etait absent, ce qui
+  faisait remonter silencieusement toutes les commandes git vers le monorepo parent (git
+  cherche le `.git` le plus proche en remontant les dossiers). Repere en verifiant l'identite
+  du depot avant de committer les sources (routine etablie ce jour-la) : `git remote -v`
+  montrait `hylst.games.git` au lieu d'un remote dedie. Aucune commande d'ecriture n'avait
+  encore ete lancee a ce moment-la, donc aucun degat sur le monorepo. Corrige en initialisant
+  un vrai depot local (`.gitignore` durci en premier, y compris un dossier
+  `docs/superpowers/` contenant un plan d'implementation redige pour un agent IA, exclu avant
+  le tout premier commit) puis en creant le depot public dedie
+  [github.com/Hylst/tidalrun](https://github.com/Hylst/tidalrun), qui n'existait pas non plus.
 
 ### Verifie
 - Build propre, modale testee a l'ouverture/fermeture, coexistence confirmee avec la modale
