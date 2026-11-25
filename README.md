@@ -26,4 +26,4 @@ npm run build
 
 ## Licence
 
-MIT
+AGPL-3.0-or-later. Voir `LICENSE`.
