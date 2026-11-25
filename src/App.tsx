@@ -2649,7 +2649,7 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
   const last = step === steps.length - 1;
 
   return (
-    <div className="fixed inset-0 z-40 flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/80 p-4 backdrop-blur-md">
       <div className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/50">
         <div className="mb-2 flex items-center justify-between">
           <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">Briefing</p>
