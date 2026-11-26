@@ -2772,16 +2772,16 @@ function Rules({ onClose }: RulesProps) {
             <div>
               <h3 className="mb-2 text-base font-semibold text-white">Commandes</h3>
               <ul className="grid gap-2 text-sm sm:grid-cols-2">
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">W</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↑</span> — Augmenter les gaz</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">S</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↓</span> — Marche arrière / freiner</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">A</span>/<span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">D</span> — Gouvernail bâbord/tribord</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Shift</span> — Direction précise</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Space</span> — Tirer (maintenir pour le tir automatique)</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Q</span> — Basculer en visée tourelle</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">E</span> — Poser une mine</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">P</span> — Pause / Reprendre</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">R</span> — Redémarrer la course</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Enter</span> — Lancer la mission</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">W</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↑</span> : Augmenter les gaz</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">S</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↓</span> : Marche arrière / freiner</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">A</span>/<span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">D</span> : Gouvernail bâbord/tribord</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Shift</span> : Direction précise</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Space</span> : Tirer (maintenir pour le tir automatique)</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Q</span> : Basculer en visée tourelle</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">E</span> : Poser une mine</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">P</span> : Pause / Reprendre</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">R</span> : Redémarrer la course</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Enter</span> : Lancer la mission</li>
               </ul>
             </div>
 
