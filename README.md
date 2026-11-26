@@ -1,4 +1,4 @@
-# Tidal Run
+# Raz-de-Marée
 
 Shoot'em up fluvial en scrolling vertical inspiré de River Raid.
 Jouable sur https://games.hylst.fr/tidalrun/

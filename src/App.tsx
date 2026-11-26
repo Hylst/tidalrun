@@ -10,7 +10,7 @@ import { audio } from "./audio";
 import { saveScore, loadScores, type ScoreEntry } from "./scores";
 
 /* ========================================================================
- *  River Raid – Tidal Run
+ *  River Raid – Raz-de-Marée
  *  Vertical scrolling naval combat with progressive difficulty,
  *  multiple weapons, many enemy types and pickups, richer animations.
  * ====================================================================== */
@@ -2479,7 +2479,7 @@ function drawMenuBackground(ctx: CanvasRenderingContext2D, time: number) {
   ctx.textBaseline = "middle";
   ctx.shadowColor = "rgba(34, 242, 255, 0.6)";
   ctx.shadowBlur = 30;
-  ctx.fillText("TIDAL RUN", 0, 0);
+  ctx.fillText("RAZ-DE-MARÉE", 0, 0);
   ctx.shadowBlur = 0;
 
   ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
@@ -3158,7 +3158,7 @@ export default function App() {
             <div className="pointer-events-none absolute left-4 right-4 top-4 flex items-start justify-between gap-3">
               <div>
                 <p className="text-xs uppercase tracking-[0.32em] text-cyan-200/90">River Raid</p>
-                <h1 className="text-2xl font-bold tracking-tight text-white drop-shadow-lg sm:text-3xl">Tidal Run</h1>
+                <h1 className="text-2xl font-bold tracking-tight text-white drop-shadow-lg sm:text-3xl">Raz-de-Marée</h1>
               </div>
               <div className="flex flex-col items-end gap-1">
                 <div className={`rounded-full border px-3 py-1 text-xs uppercase tracking-[0.22em] ${narrowWarning ? "border-amber-300/70 bg-amber-400/15 text-amber-100" : "border-cyan-200/20 bg-slate-950/50 text-cyan-100"}`}>

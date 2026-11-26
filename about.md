@@ -1,6 +1,6 @@
-# Tidal Run — Shoot'em up fluvial
+# Raz-de-Marée — Shoot'em up fluvial
 
-Tidal Run est un shoot'em up en scrolling vertical inspiré du classique River Raid. Pilote un bateau de combat sur une rivière générée procéduralement, tire sur les ennemis et les ponts, ramasse du carburant et des power-ups. Gère ton carburant limité : tu exploses si tu rates un ravitaillement. Plus tu progresses, plus la rivière se rétrécit et les ennemis deviennent coriaces.
+Raz-de-Marée est un shoot'em up en scrolling vertical inspiré du classique River Raid. Pilote un bateau de combat sur une rivière générée procéduralement, tire sur les ennemis et les ponts, ramasse du carburant et des power-ups. Gère ton carburant limité : tu exploses si tu rates un ravitaillement. Plus tu progresses, plus la rivière se rétrécit et les ennemis deviennent coriaces.
 
 ## Contrôles
 - **ZQSD / Flèches** : direction (Z = accélérer, S = freiner/reculer, Q/D = gauche/droite)
