@@ -10,7 +10,7 @@ import { audio } from "./audio";
 import { saveScore, loadScores, type ScoreEntry } from "./scores";
 
 /* ========================================================================
- *  River Raid – Raz-de-Marée
+ *  Raid fluvial – Raz-de-Marée
  *  Vertical scrolling naval combat with progressive difficulty,
  *  multiple weapons, many enemy types and pickups, richer animations.
  * ====================================================================== */
@@ -2484,7 +2484,7 @@ function drawMenuBackground(ctx: CanvasRenderingContext2D, time: number) {
 
   ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
   ctx.font = "400 14px ui-sans-serif, system-ui";
-  ctx.fillText("RIVER RAID", 0, 44);
+  ctx.fillText("RAID FLUVIAL", 0, 44);
 
   ctx.restore();
 
@@ -3154,10 +3154,10 @@ export default function App() {
 
         <section className="order-1 flex flex-col items-center gap-3 lg:order-2">
           <div className="relative mx-auto aspect-[640/900] w-full max-w-full overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950 shadow-2xl shadow-cyan-950/20 sm:max-w-[620px]">
-            <canvas ref={canvasRef} className="h-full w-full touch-none" aria-label="River Raid game canvas" />
+            <canvas ref={canvasRef} className="h-full w-full touch-none" aria-label="Raid fluvial game canvas" />
             <div className="pointer-events-none absolute left-4 right-4 top-4 flex items-start justify-between gap-3">
               <div>
-                <p className="text-xs uppercase tracking-[0.32em] text-cyan-200/90">River Raid</p>
+                <p className="text-xs uppercase tracking-[0.32em] text-cyan-200/90">Raid fluvial</p>
                 <h1 className="text-2xl font-bold tracking-tight text-white drop-shadow-lg sm:text-3xl">Raz-de-Marée</h1>
               </div>
               <div className="flex flex-col items-end gap-1">
