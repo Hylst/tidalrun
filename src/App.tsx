@@ -233,10 +233,10 @@ type RiverShape = {
 const BOATS: Boat[] = [
   {
     id: "skiff",
-    name: "Delta Skiff",
-    callsign: "Swiftwater",
-    role: "Balanced patrol boat",
-    note: "Responsive rudder, moderate wake drift, forgiving fuel economy.",
+    name: "Esquif du Delta",
+    callsign: "Eau-Vive",
+    role: "Patrouilleur équilibré",
+    note: "Gouvernail réactif, dérive de sillage modérée, consommation clémente.",
     hullColor: "#f97316",
     deckColor: "#fed7aa",
     wakeColor: "rgba(251, 146, 60, 0.32)",
@@ -253,10 +253,10 @@ const BOATS: Boat[] = [
   },
   {
     id: "hydrofoil",
-    name: "Kestrel Hydrofoil",
-    callsign: "Needle",
-    role: "Fast assault craft",
-    note: "Very quick and light. Planes over water but punishes oversteer.",
+    name: "Hydroptère Crécerelle",
+    callsign: "Aiguille",
+    role: "Vedette d'assaut rapide",
+    note: "Très rapide et léger. Déjauge au-dessus de l'eau mais pardonne mal le surbraquage.",
     hullColor: "#38bdf8",
     deckColor: "#e0f2fe",
     wakeColor: "rgba(56, 189, 248, 0.36)",
@@ -273,10 +273,10 @@ const BOATS: Boat[] = [
   },
   {
     id: "tug",
-    name: "Harbor Tug Defender",
-    callsign: "Anchor",
-    role: "Armored river tug",
-    note: "Heavy hull, slow response, excellent control in tight passages.",
+    name: "Remorqueur de Port",
+    callsign: "Ancre",
+    role: "Remorqueur fluvial blindé",
+    note: "Coque lourde, réaction lente, excellent contrôle dans les passages étroits.",
     hullColor: "#64748b",
     deckColor: "#cbd5e1",
     wakeColor: "rgba(148, 163, 184, 0.3)",
@@ -293,10 +293,10 @@ const BOATS: Boat[] = [
   },
   {
     id: "cutter",
-    name: "Northwind Cutter",
-    callsign: "Keelmark",
-    role: "Stable river cutter",
-    note: "Long keel and steady aim. Best for bridge runs and fuel discipline.",
+    name: "Cotre du Nord",
+    callsign: "Sillage",
+    role: "Cotre fluvial stable",
+    note: "Longue quille et visée stable. Idéal pour les ponts et la gestion du carburant.",
     hullColor: "#22c55e",
     deckColor: "#dcfce7",
     wakeColor: "rgba(34, 197, 94, 0.32)",
@@ -331,7 +331,7 @@ function clamp(value: number, min: number, max: number) {
 }
 
 function formatScore(value: number) {
-  return Math.max(0, Math.round(value)).toLocaleString("en-US");
+  return Math.max(0, Math.round(value)).toLocaleString("fr-FR");
 }
 
 function pseudo(value: number) {
@@ -396,8 +396,8 @@ type Tier = {
 const TIERS: Tier[] = [
   {
     id: 1,
-    name: "Training Run",
-    description: "Light traffic, generous supplies.",
+    name: "Sortie d'entraînement",
+    description: "Trafic léger, ravitaillement généreux.",
     spawnGap: [250, 340],
     enemySpeed: 0.55,
     enemyFire: 0.5,
@@ -407,8 +407,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 2,
-    name: "Maiden Voyage",
-    description: "Patrol boats appear. Pickups are frequent.",
+    name: "Premier voyage",
+    description: "Les patrouilleurs arrivent. Le ravitaillement est fréquent.",
     spawnGap: [230, 320],
     enemySpeed: 0.68,
     enemyFire: 0.6,
@@ -418,8 +418,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 3,
-    name: "Coastal Patrol",
-    description: "Raider skiffs join the river.",
+    name: "Patrouille côtière",
+    description: "Les esquifs pillards rejoignent la rivière.",
     spawnGap: [215, 300],
     enemySpeed: 0.78,
     enemyFire: 0.7,
@@ -429,8 +429,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 4,
-    name: "Delta Crossfire",
-    description: "Choppers overhead, shield drops appear.",
+    name: "Feu croisé du Delta",
+    description: "Hélicoptères au-dessus, des boucliers apparaissent.",
     spawnGap: [200, 285],
     enemySpeed: 0.86,
     enemyFire: 0.82,
@@ -440,8 +440,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 5,
-    name: "Minesweeper Sweep",
-    description: "Mine density rises, submarines surface.",
+    name: "Balayage de mines",
+    description: "Les mines se densifient, les sous-marins refont surface.",
     spawnGap: [185, 270],
     enemySpeed: 0.95,
     enemyFire: 0.9,
@@ -451,8 +451,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 6,
-    name: "Gunboat Alley",
-    description: "Heavy gunboats and rapid-fire pickups.",
+    name: "Allée des canonnières",
+    description: "Canonnières lourdes et ravitaillement de tirs rapides.",
     spawnGap: [170, 255],
     enemySpeed: 1.05,
     enemyFire: 1.0,
@@ -462,8 +462,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 7,
-    name: "Storm Front",
-    description: "Jets streak over the river.",
+    name: "Front orageux",
+    description: "Les avions de chasse traversent le ciel.",
     spawnGap: [155, 240],
     enemySpeed: 1.12,
     enemyFire: 1.08,
@@ -473,8 +473,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 8,
-    name: "Iron Gauntlet",
-    description: "Torpedoes and heavy fire.",
+    name: "Gantelet de fer",
+    description: "Torpilles et tirs nourris.",
     spawnGap: [145, 225],
     enemySpeed: 1.2,
     enemyFire: 1.18,
@@ -484,8 +484,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 9,
-    name: "Admiral's Reach",
-    description: "Every threat active, narrow passages.",
+    name: "Eaux de l'amiral",
+    description: "Toutes les menaces actives, passages étroits.",
     spawnGap: [135, 210],
     enemySpeed: 1.3,
     enemyFire: 1.28,
@@ -495,8 +495,8 @@ const TIERS: Tier[] = [
   },
   {
     id: 10,
-    name: "Endless Tide",
-    description: "The river never forgives.",
+    name: "Marée sans fin",
+    description: "La rivière ne pardonne jamais.",
     spawnGap: [125, 195],
     enemySpeed: 1.42,
     enemyFire: 1.4,
@@ -553,7 +553,7 @@ function createGame(boat: Boat): RuntimeGame {
     seed: 87521 + Math.floor(Math.random() * 900000),
     time: 0,
     over: false,
-    message: "Mission complete.",
+    message: "Mission accomplie.",
     shake: 0,
     flash: 0,
     tier: 1,
@@ -903,7 +903,7 @@ function spawnWorld(game: RuntimeGame) {
 
 /* ---------------- Damage & firing ---------------- */
 
-function applyDamage(game: RuntimeGame, amount: number, message = "Hull breached in hostile water.") {
+function applyDamage(game: RuntimeGame, amount: number, message = "Coque percée en eaux hostiles.") {
   if (game.over) return;
   if (game.player.shield > 0) {
     game.player.shield = Math.max(0, game.player.shield - 1.4);
@@ -1063,7 +1063,7 @@ function damageObject(game: RuntimeGame, object: WorldObject, amount: number) {
     spawnExplosion(game, object.x - 58, object.y + 4, "#fb923c", 52);
     spawnExplosion(game, object.x + 58, object.y - 4, "#fb923c", 52);
     spawnParticles(game, object.x, object.y, "#fde047", 28, 210);
-    spawnFloat(game, object.x, object.y, `+${object.value} BRIDGE`, "#fde047");
+    spawnFloat(game, object.x, object.y, `+${object.value} PONT`, "#fde047");
     game.shake = Math.max(game.shake, 16);
     return;
   }
@@ -1278,7 +1278,7 @@ function collidePlayer(game: RuntimeGame) {
       if (!object.destroyed && Math.abs(dy) < boat.length * 0.34) {
         game.hull = 0;
         game.over = true;
-        game.message = "Bridge target not cleared before impact.";
+        game.message = "Pont non détruit avant l'impact.";
         spawnExplosion(game, player.x, game.distance + 4, "#fecaca", 90);
         spawnParticles(game, player.x, game.distance + 4, "#fca5a5", 30, 240);
       }
@@ -1298,7 +1298,7 @@ function collidePlayer(game: RuntimeGame) {
       audio.playSfx("pickup");
       spawnExplosion(game, object.x, object.y, "#fde047", 34);
       spawnParticles(game, object.x, object.y, "#fde047", 8, 60);
-      spawnFloat(game, object.x, object.y, "+FUEL", "#fde047");
+      spawnFloat(game, object.x, object.y, "+CARBURANT", "#fde047");
       continue;
     }
     if (object.kind === "repair") {
@@ -1306,7 +1306,7 @@ function collidePlayer(game: RuntimeGame) {
       game.hull = Math.min(game.maxHull, game.hull + 45);
       game.score += object.value;
       spawnExplosion(game, object.x, object.y, "#86efac", 34);
-      spawnFloat(game, object.x, object.y, "+REPAIR", "#86efac");
+      spawnFloat(game, object.x, object.y, "+RÉPARATION", "#86efac");
       continue;
     }
     if (object.kind === "shield") {
@@ -1314,7 +1314,7 @@ function collidePlayer(game: RuntimeGame) {
       player.shield = Math.min(6, player.shield + 3);
       game.score += object.value;
       spawnExplosion(game, object.x, object.y, "#93c5fd", 34);
-      spawnFloat(game, object.x, object.y, "+SHIELD", "#93c5fd");
+      spawnFloat(game, object.x, object.y, "+BOUCLIER", "#93c5fd");
       continue;
     }
     if (object.kind === "rapid") {
@@ -1323,7 +1323,7 @@ function collidePlayer(game: RuntimeGame) {
       player.weaponAmmo = 18;
       game.score += object.value;
       spawnExplosion(game, object.x, object.y, "#fca5a5", 34);
-      spawnFloat(game, object.x, object.y, "+RAPID FIRE", "#fca5a5");
+      spawnFloat(game, object.x, object.y, "+TIR RAPIDE", "#fca5a5");
       continue;
     }
     if (object.kind === "spread") {
@@ -1332,7 +1332,7 @@ function collidePlayer(game: RuntimeGame) {
       player.weaponAmmo = 8;
       game.score += object.value;
       spawnExplosion(game, object.x, object.y, "#c4b5fd", 34);
-      spawnFloat(game, object.x, object.y, "+SPREAD", "#c4b5fd");
+      spawnFloat(game, object.x, object.y, "+ÉVENTAIL", "#c4b5fd");
       continue;
     }
     if (object.kind === "missile") {
@@ -1351,7 +1351,7 @@ function collidePlayer(game: RuntimeGame) {
       player.weaponAmmo = 14;
       game.score += object.value;
       spawnExplosion(game, object.x, object.y, "#2dd4bf", 34);
-      spawnFloat(game, object.x, object.y, "+TURRET", "#2dd4bf");
+      spawnFloat(game, object.x, object.y, "+TOURELLE", "#2dd4bf");
       continue;
     }
     if (object.kind === "mines") {
@@ -1367,7 +1367,7 @@ function collidePlayer(game: RuntimeGame) {
       game.score += object.value;
       spawnExplosion(game, object.x, object.y, "#fde68a", 46);
       spawnParticles(game, object.x, object.y, "#fde047", 18, 180);
-      spawnFloat(game, object.x, object.y, `+${object.value} STAR`, "#fde047");
+      spawnFloat(game, object.x, object.y, `+${object.value} ÉTOILE`, "#fde047");
       continue;
     }
 
@@ -1556,18 +1556,18 @@ function updateGame(game: RuntimeGame, inputs: Inputs, dt: number) {
   if (game.distance >= game.nextEventY) {
     const eventRoll = seededRandom(game);
     if (eventRoll < 0.25) {
-      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "WATERFALL SPEED BOOST", "#22f2ff");
+      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "CASCADE : ACCÉLÉRATION", "#22f2ff");
       player.speed *= 1.4;
       game.shake = Math.max(game.shake, 20);
     } else if (eventRoll < 0.5) {
-      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "CANYON PASSAGE +BONUS", "#fde047");
+      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "PASSAGE DU CANYON : BONUS", "#fde047");
       game.score += 500 + game.tier * 100;
     } else if (eventRoll < 0.75) {
-      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "WHIRLPOOL ESCAPE", "#f97316");
+      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "ÉCHAPPÉE DU TOURBILLON", "#f97316");
       player.heading += (seededRandom(game) - 0.5) * 0.8;
       game.shake = Math.max(game.shake, 16);
     } else {
-      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "SUPPLY DROP", "#86efac");
+      spawnFloat(game, GAME_WIDTH / 2, game.distance + 200, "RAVITAILLEMENT", "#86efac");
       game.fuel = clamp(game.fuel + 20, 0, 100);
       game.hull = Math.min(game.maxHull, game.hull + 25);
     }
@@ -1587,7 +1587,7 @@ function updateGame(game: RuntimeGame, inputs: Inputs, dt: number) {
   if (game.fuel <= 0 && !game.over) {
     game.fuel = 0;
     game.over = true;
-    game.message = "Fuel ran dry before the next supply barge.";
+    game.message = "Carburant épuisé avant la prochaine barge de ravitaillement.";
   }
   cleanupWorld(game);
 }
@@ -1761,7 +1761,7 @@ function drawBridge(ctx: CanvasRenderingContext2D, game: RuntimeGame, bridge: Wo
     ctx.fillStyle = "#fecaca";
     ctx.font = "700 16px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
-    ctx.fillText("TARGET", river.center, 5);
+    ctx.fillText("CIBLE", river.center, 5);
     for (let i = 0; i < bridge.health; i += 1) {
       ctx.fillStyle = "#fde047";
       ctx.fillRect(river.center - 28 + i * 12, 26, 8, 5);
@@ -1867,7 +1867,7 @@ function drawPickup(ctx: CanvasRenderingContext2D, object: WorldObject, y: numbe
     ctx.fillStyle = "#78350f";
     ctx.font = "700 12px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
-    ctx.fillText("FUEL", 0, 5);
+    ctx.fillText("CARB.", 0, 5);
     ctx.strokeStyle = "rgba(254, 240, 138, 0.6)";
     ctx.lineWidth = 2;
     ctx.strokeRect(-15, -20, 30, 40);
@@ -1906,7 +1906,7 @@ function drawPickup(ctx: CanvasRenderingContext2D, object: WorldObject, y: numbe
     ctx.fillStyle = "#ede9fe";
     ctx.font = "700 14px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
-    ctx.fillText("S", 0, 5);
+    ctx.fillText("B", 0, 5);
   } else if (object.kind === "missile") {
     ctx.fillStyle = "#f59e0b";
     ctx.beginPath();
@@ -2599,7 +2599,7 @@ function ControlButton({ label, sublabel, onHold, active }: { label: string; sub
 }
 
 function weaponLabel(weapon: Weapon) {
-  return weapon === "cannon" ? "Cannon" : weapon === "rapid" ? "Rapid" : weapon === "spread" ? "Spread" : weapon === "missile" ? "Missile" : "Turret";
+  return weapon === "cannon" ? "Canon" : weapon === "rapid" ? "Tir rapide" : weapon === "spread" ? "Éventail" : weapon === "missile" ? "Missile" : "Tourelle";
 }
 
 function weaponColor(weapon: Weapon) {
@@ -2620,26 +2620,26 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
 
   const steps = [
     {
-      title: "Welcome, captain",
-      text: "You pilot a river raid boat through hostile waters. Clear bridge targets, dodge enemy fire, and keep your fuel tanks full.",
+      title: "Bienvenue, capitaine",
+      text: "Vous pilotez une vedette fluviale en eaux hostiles. Détruisez les ponts, esquivez les tirs ennemis et gardez vos réservoirs pleins.",
       accent: "cyan",
       icon: "⚓",
     },
     {
-      title: "Controls",
-      text: "W / Up throttle up. S / Down to backwater. A and D / Left and Right rudder. Shift for precision steering. Space to fire.",
+      title: "Commandes",
+      text: "W / Haut pour accélérer. S / Bas pour faire marche arrière. A et D / Gauche et Droite pour le gouvernail. Maj pour une direction précise. Espace pour tirer.",
       accent: "emerald",
       icon: "🎮",
     },
     {
-      title: "Pickups",
-      text: "Fuel barrels keep you moving. Repair kits restore hull. Shields absorb damage. Weapon crates grant rapid fire, spread shot, or homing missiles.",
+      title: "Ravitaillement",
+      text: "Les barils de carburant vous font avancer. Les kits de réparation restaurent la coque. Les boucliers absorbent les dégâts. Les caisses d'armes offrent tir rapide, tir en éventail ou missiles à tête chercheuse.",
       accent: "amber",
       icon: "🎁",
     },
     {
       title: "Progression",
-      text: "The mission begins easy. Every kilometer unlocks new enemies and tighter narrows. Destroy bridge targets before reaching them or they'll sink you.",
+      text: "La mission commence facilement. Chaque kilomètre débloque de nouveaux ennemis et des passages plus étroits. Détruisez les ponts avant de les atteindre, sinon ils vous couleront.",
       accent: "violet",
       icon: "📈",
     },
@@ -2653,7 +2653,7 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
       <div className="w-full max-w-lg rounded-[2rem] border border-white/10 bg-slate-900/90 p-8 shadow-2xl shadow-slate-950/50">
         <div className="mb-2 flex items-center justify-between">
           <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">Briefing</p>
-          <span className="text-xs text-slate-500">Step {step + 1} / {steps.length}</span>
+          <span className="text-xs text-slate-500">Étape {step + 1} / {steps.length}</span>
         </div>
 
         <div className="mb-5 flex items-center gap-4">
@@ -2662,7 +2662,7 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
           </span>
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-white">{current.title}</h2>
-            <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Captain's briefing</p>
+            <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Briefing du capitaine</p>
           </div>
         </div>
 
@@ -2683,7 +2683,7 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
             onClick={onShowRules}
             className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-300/50"
           >
-            View rules
+            Voir les règles
           </button>
           <div className="flex gap-3">
             {step > 0 ? (
@@ -2692,7 +2692,7 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
                 onClick={() => setStep((s) => s - 1)}
                 className="rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-300/50"
               >
-                Back
+                Retour
               </button>
             ) : null}
             <button
@@ -2706,7 +2706,7 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
               }}
               className="rounded-full bg-cyan-300 px-6 py-2.5 text-sm font-bold text-slate-950 transition hover:bg-cyan-200"
             >
-              {last ? "Begin mission" : "Next"}
+              {last ? "Lancer la mission" : "Suivant"}
             </button>
           </div>
         </div>
@@ -2722,27 +2722,27 @@ function Onboarding({ onComplete, onShowRules }: OnboardingProps) {
 type RulesProps = { onClose: () => void };
 
 const ENEMY_ROSTER = [
-  { name: "Patrol boat", desc: "Steady enemy that patrols the river and fires bullets.", color: "bg-slate-700" },
-  { name: "Raider skiff", desc: "Fast zig-zag skiff. Ramming hazard, no gun.", color: "bg-red-900" },
-  { name: "Chopper", desc: "Overflying helicopter that drops bombs.", color: "bg-zinc-700" },
-  { name: "Submarine", desc: "Surfaces to fire torpedoes, then submerges. Can't be hit while submerged.", color: "bg-slate-900" },
-  { name: "Gunboat", desc: "Heavy, fires three-shot bursts. Takes multiple hits.", color: "bg-slate-800" },
-  { name: "Jet", desc: "Screams across the sky and launches homing missiles.", color: "bg-gray-600" },
-  { name: "Mine", desc: "Floating hazard. Detonates on contact for heavy damage.", color: "bg-rose-900" },
-  { name: "Debris", desc: "Floating log. Light damage but slows your boat.", color: "bg-amber-900" },
-  { name: "Bridge", desc: "Target. Destroy before crossing or be sunk.", color: "bg-amber-900" },
+  { name: "Patrouilleur", desc: "Ennemi régulier qui patrouille la rivière et tire des balles.", color: "bg-slate-700" },
+  { name: "Esquif pillard", desc: "Esquif rapide en zigzag. Dangereux au bélier, sans canon.", color: "bg-red-900" },
+  { name: "Hélicoptère", desc: "Survole la rivière et largue des bombes.", color: "bg-zinc-700" },
+  { name: "Sous-marin", desc: "Fait surface pour tirer des torpilles, puis plonge. Intouchable sous l'eau.", color: "bg-slate-900" },
+  { name: "Canonnière", desc: "Lourde, tire par rafales de trois. Encaisse plusieurs coups.", color: "bg-slate-800" },
+  { name: "Avion de chasse", desc: "Traverse le ciel et lance des missiles à tête chercheuse.", color: "bg-gray-600" },
+  { name: "Mine", desc: "Danger flottant. Explose au contact et inflige de gros dégâts.", color: "bg-rose-900" },
+  { name: "Débris", desc: "Tronc flottant. Dégâts légers mais ralentit le bateau.", color: "bg-amber-900" },
+  { name: "Pont", desc: "Cible. Détruisez-le avant de le franchir, sinon vous coulez.", color: "bg-amber-900" },
 ];
 
 const PICKUP_ROSTER = [
-  { name: "Fuel barrel", desc: "+32 fuel. Essential for long runs.", color: "bg-yellow-500" },
-  { name: "Repair kit", desc: "+45 hull integrity.", color: "bg-green-600" },
-  { name: "Shield", desc: "Absorbs several hits before fading.", color: "bg-blue-500" },
-  { name: "Rapid fire", desc: "Dual-stream cannon for a limited ammo count.", color: "bg-red-500" },
-  { name: "Spread shot", desc: "Four-way fan blast for a few shots.", color: "bg-violet-600" },
-  { name: "Missile crate", desc: "Homing missiles that lock onto enemies.", color: "bg-amber-500" },
-  { name: "Turret", desc: "Aimable cannon. Q to toggle, A/D to aim.", color: "bg-teal-500" },
-  { name: "Mine pack", desc: "+3 deployable mines. Press E to drop.", color: "bg-rose-500" },
-  { name: "Star", desc: "Rare. Huge score bonus.", color: "bg-yellow-300" },
+  { name: "Baril de carburant", desc: "+32 de carburant. Indispensable pour les longues courses.", color: "bg-yellow-500" },
+  { name: "Kit de réparation", desc: "+45 d'intégrité de coque.", color: "bg-green-600" },
+  { name: "Bouclier", desc: "Absorbe plusieurs coups avant de disparaître.", color: "bg-blue-500" },
+  { name: "Tir rapide", desc: "Canon double pendant un nombre de tirs limité.", color: "bg-red-500" },
+  { name: "Tir en éventail", desc: "Tir en éventail à quatre directions, pour quelques tirs.", color: "bg-violet-600" },
+  { name: "Caisse de missiles", desc: "Missiles à tête chercheuse qui verrouillent les ennemis.", color: "bg-amber-500" },
+  { name: "Tourelle", desc: "Canon orientable. Q pour basculer, A/D pour viser.", color: "bg-teal-500" },
+  { name: "Pack de mines", desc: "+3 mines à poser. Appuyez sur E pour larguer.", color: "bg-rose-500" },
+  { name: "Étoile", desc: "Rare. Gros bonus de score.", color: "bg-yellow-300" },
 ];
 
 function Rules({ onClose }: RulesProps) {
@@ -2751,42 +2751,42 @@ function Rules({ onClose }: RulesProps) {
       <div className="flex max-h-[90vh] w-full max-w-3xl flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-slate-900/95 shadow-2xl shadow-slate-950/60">
         <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
           <div>
-            <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">Field manual</p>
-            <h2 className="text-xl font-semibold text-white">Rules of engagement</h2>
+            <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">Manuel de bord</p>
+            <h2 className="text-xl font-semibold text-white">Règles d'engagement</h2>
           </div>
           <button
             type="button"
             onClick={onClose}
             className="rounded-full border border-white/15 px-4 py-1.5 text-xs font-semibold text-slate-200 transition hover:border-cyan-300/50"
           >
-            Close
+            Fermer
           </button>
         </div>
         <div className="flex-1 overflow-y-auto px-6 py-5">
           <section className="space-y-4 text-sm leading-6 text-slate-300">
             <div>
-              <h3 className="mb-2 text-base font-semibold text-white">Objective</h3>
-              <p>Navigate upstream, destroy every bridge target before crossing, collect fuel and supplies, and survive as long as you can. The longer you run, the harder the river becomes.</p>
+              <h3 className="mb-2 text-base font-semibold text-white">Objectif</h3>
+              <p>Remontez le fleuve, détruisez chaque pont avant de le franchir, collectez carburant et ravitaillement, et survivez le plus longtemps possible. Plus vous avancez, plus la rivière se durcit.</p>
             </div>
 
             <div>
-              <h3 className="mb-2 text-base font-semibold text-white">Controls</h3>
+              <h3 className="mb-2 text-base font-semibold text-white">Commandes</h3>
               <ul className="grid gap-2 text-sm sm:grid-cols-2">
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">W</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↑</span> — Add throttle</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">S</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↓</span> — Backwater / brake</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">A</span>/<span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">D</span> — Rudder port/starboard</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Shift</span> — Precision steering</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Space</span> — Fire (hold for auto-fire)</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Q</span> — Toggle turret aim mode</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">E</span> — Deploy mine</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">P</span> — Pause / Resume</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">R</span> — Restart run</li>
-                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Enter</span> — Launch mission</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">W</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↑</span> — Augmenter les gaz</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">S</span> / <span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">↓</span> — Marche arrière / freiner</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">A</span>/<span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">D</span> — Gouvernail bâbord/tribord</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Shift</span> — Direction précise</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Space</span> — Tirer (maintenir pour le tir automatique)</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Q</span> — Basculer en visée tourelle</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">E</span> — Poser une mine</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">P</span> — Pause / Reprendre</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">R</span> — Redémarrer la course</li>
+                <li><span className="rounded bg-slate-800 px-2 py-0.5 font-mono text-cyan-200">Enter</span> — Lancer la mission</li>
               </ul>
             </div>
 
             <div>
-              <h3 className="mb-2 text-base font-semibold text-white">Enemies</h3>
+              <h3 className="mb-2 text-base font-semibold text-white">Ennemis</h3>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {ENEMY_ROSTER.map((enemy) => (
                   <li key={enemy.name} className="flex items-start gap-3 rounded-xl border border-white/5 bg-slate-900/50 p-3">
@@ -2801,7 +2801,7 @@ function Rules({ onClose }: RulesProps) {
             </div>
 
             <div>
-              <h3 className="mb-2 text-base font-semibold text-white">Pickups</h3>
+              <h3 className="mb-2 text-base font-semibold text-white">Ravitaillement</h3>
               <ul className="grid gap-2 sm:grid-cols-2">
                 {PICKUP_ROSTER.map((pickup) => (
                   <li key={pickup.name} className="flex items-start gap-3 rounded-xl border border-white/5 bg-slate-900/50 p-3">
@@ -2816,17 +2816,17 @@ function Rules({ onClose }: RulesProps) {
             </div>
 
             <div>
-              <h3 className="mb-2 text-base font-semibold text-white">Scoring</h3>
-              <p>Killing enemies in quick succession builds a combo up to x12. Destroying bridge targets grants large bonuses. Star pickups multiply your score. The further you go, the bigger the payouts — but the tougher the enemies.</p>
+              <h3 className="mb-2 text-base font-semibold text-white">Score</h3>
+              <p>Enchaîner les ennemis rapidement fait monter un combo jusqu'à x12. Détruire les ponts rapporte de gros bonus. Les étoiles multiplient le score. Plus vous avancez, plus les gains sont gros, mais plus les ennemis sont coriaces.</p>
             </div>
 
             <div>
-              <h3 className="mb-2 text-base font-semibold text-white">Tips</h3>
+              <h3 className="mb-2 text-base font-semibold text-white">Astuces</h3>
               <ul className="list-disc space-y-1 pl-5">
-                <li>Watch the throttle gauge — at top speed you handle worse but clear zones faster.</li>
-                <li>Shields block one or two big hits; save them for bridges.</li>
-                <li>In narrows, use Shift for precision steering to avoid grinding on banks.</li>
-                <li>Missiles home, but their ammo is limited — fire wisely.</li>
+                <li>Surveillez la jauge de gaz : à pleine vitesse, la coque répond moins bien mais vous traversez les zones plus vite.</li>
+                <li>Les boucliers bloquent un ou deux gros coups ; gardez-les pour les ponts.</li>
+                <li>Dans les passages étroits, utilisez Maj pour une direction précise et éviter de racler les berges.</li>
+                <li>Les missiles suivent leur cible, mais les munitions sont limitées : tirez avec discernement.</li>
               </ul>
             </div>
           </section>
@@ -2848,7 +2848,7 @@ function HighScores() {
   if (scores.length === 0) return null;
   return (
     <div className="mt-3 w-full max-w-md rounded-xl border border-white/10 bg-slate-950/70 p-3">
-      <p className="mb-2 text-[10px] uppercase tracking-[0.3em] text-cyan-300">High Scores</p>
+      <p className="mb-2 text-[10px] uppercase tracking-[0.3em] text-cyan-300">Meilleurs scores</p>
       <div className="space-y-1">
         {scores.slice(0, 5).map((entry, index) => (
           <div key={index} className="flex items-center justify-between text-[10px] text-slate-400">
@@ -3055,7 +3055,7 @@ export default function App() {
 
   const canChooseBoat = phase !== "playing" && phase !== "paused";
   const narrowWarning = metrics.narrowness > 0.45;
-  const actionLabel = phase === "playing" ? "Pause" : phase === "paused" ? "Resume" : "Launch";
+  const actionLabel = phase === "playing" ? "Pause" : phase === "paused" ? "Reprendre" : "Lancer";
 
   const currentTier = TIERS.find((t) => t.id === metrics.tier) ?? TIERS[0];
 
@@ -3069,7 +3069,7 @@ export default function App() {
         className="fixed right-4 top-4 z-30 flex items-center gap-2 rounded-full border border-cyan-300/30 bg-slate-900/80 px-4 py-2 text-sm font-semibold text-cyan-100 shadow-lg shadow-slate-950/40 backdrop-blur transition hover:border-cyan-300/60 hover:bg-cyan-950/70"
       >
         <span className="flex h-5 w-5 items-center justify-center rounded-full border border-cyan-300/60 text-xs font-bold text-cyan-200">?</span>
-        <span className="hidden sm:inline">Rules</span>
+        <span className="hidden sm:inline">Règles</span>
       </button>
 
       <button
@@ -3109,10 +3109,10 @@ export default function App() {
         <section className="order-2 rounded-[2rem] border border-white/10 bg-slate-950/68 p-3 shadow-2xl shadow-slate-950/30 backdrop-blur sm:p-4 lg:order-1">
           <div className="mb-4 flex items-start justify-between gap-3">
             <div>
-              <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">Boat yard</p>
-              <h2 className="mt-2 text-2xl font-semibold tracking-tight">Choose your hull</h2>
+              <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">Chantier naval</p>
+              <h2 className="mt-2 text-2xl font-semibold tracking-tight">Choisissez votre coque</h2>
             </div>
-            <span className="rounded-full border border-cyan-300/20 px-3 py-1 text-xs text-cyan-100">4 boats</span>
+            <span className="rounded-full border border-cyan-300/20 px-3 py-1 text-xs text-cyan-100">4 bateaux</span>
           </div>
           <div className="space-y-3">
             {BOATS.map((boat) => {
@@ -3140,10 +3140,10 @@ export default function App() {
                   {selected ? (
                     <div className="mt-3 space-y-2">
                       <p className="text-sm leading-5 text-slate-300">{boat.note}</p>
-                      <BoatStat label="Speed" value={boat.stats.speed} />
-                      <BoatStat label="Handling" value={boat.stats.handling} />
-                      <BoatStat label="Armor" value={boat.stats.armor} />
-                      <BoatStat label="Fuel" value={boat.stats.economy} />
+                      <BoatStat label="Vitesse" value={boat.stats.speed} />
+                      <BoatStat label="Maniabilité" value={boat.stats.handling} />
+                      <BoatStat label="Blindage" value={boat.stats.armor} />
+                      <BoatStat label="Carburant" value={boat.stats.economy} />
                     </div>
                   ) : null}
                 </button>
@@ -3154,7 +3154,7 @@ export default function App() {
 
         <section className="order-1 flex flex-col items-center gap-3 lg:order-2">
           <div className="relative mx-auto aspect-[640/900] w-full max-w-full overflow-hidden rounded-[2rem] border border-cyan-300/20 bg-slate-950 shadow-2xl shadow-cyan-950/20 sm:max-w-[620px]">
-            <canvas ref={canvasRef} className="h-full w-full touch-none" aria-label="Raid fluvial game canvas" />
+            <canvas ref={canvasRef} className="h-full w-full touch-none" aria-label="Zone de jeu Raz-de-Marée" />
             <div className="pointer-events-none absolute left-4 right-4 top-4 flex items-start justify-between gap-3">
               <div>
                 <p className="text-xs uppercase tracking-[0.32em] text-cyan-200/90">Raid fluvial</p>
@@ -3162,10 +3162,10 @@ export default function App() {
               </div>
               <div className="flex flex-col items-end gap-1">
                 <div className={`rounded-full border px-3 py-1 text-xs uppercase tracking-[0.22em] ${narrowWarning ? "border-amber-300/70 bg-amber-400/15 text-amber-100" : "border-cyan-200/20 bg-slate-950/50 text-cyan-100"}`}>
-                  {narrowWarning ? "Narrows" : selectedBoat.callsign}
+                  {narrowWarning ? "Passage étroit" : selectedBoat.callsign}
                 </div>
                 <div className="rounded-full border border-violet-300/30 bg-violet-400/10 px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-violet-100">
-                  Tier {currentTier.id} · {currentTier.name}
+                  Palier {currentTier.id} · {currentTier.name}
                 </div>
               </div>
             </div>
@@ -3181,15 +3181,15 @@ export default function App() {
               <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-950/48 p-4 backdrop-blur-[2px]">
                 <div className="max-w-md rounded-[2rem] border border-white/10 bg-slate-950/88 p-5 text-center shadow-2xl shadow-slate-950/50">
                   <p className="text-xs uppercase tracking-[0.34em] text-cyan-300">
-                    {phase === "paused" ? "Paused" : phase === "ended" ? "Run report" : "Mission ready"}
+                    {phase === "paused" ? "En pause" : phase === "ended" ? "Bilan de course" : "Mission prête"}
                   </p>
                   <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white">
-                    {phase === "ended" ? result : phase === "paused" ? "Hold position in the current" : "Clear bridges. Conserve fuel."}
+                    {phase === "ended" ? result : phase === "paused" ? "Tenez position dans le courant" : "Détruisez les ponts. Ménagez le carburant."}
                   </h2>
                   <p className="mt-2 text-xs leading-5 text-slate-300">
                     {phase === "ended"
-                      ? `Score ${formatScore(metrics.score)} \u2022 ${Math.round(metrics.distance)} m \u2022 ${metrics.bridges} bridges \u2022 ${metrics.enemiesKilled} kills \u2022 x${metrics.maxCombo} combo`
-                      : "Throttle builds gradually, the rudder lags under load, and the river current keeps pushing your hull toward the banks."}
+                      ? `Score ${formatScore(metrics.score)} \u2022 ${Math.round(metrics.distance)} m \u2022 ${metrics.bridges} ponts \u2022 ${metrics.enemiesKilled} ennemis \u2022 combo x${metrics.maxCombo}`
+                      : "Les gaz montent progressivement, le gouvernail répond avec retard sous la charge, et le courant pousse la coque vers les berges."}
                   </p>
                   <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:justify-center">
                     <button
@@ -3197,7 +3197,7 @@ export default function App() {
                       onClick={phase === "paused" ? togglePause : startGame}
                       className="rounded-full bg-cyan-300 px-5 py-2 text-xs font-bold text-slate-950 shadow-lg shadow-cyan-950/40 transition hover:bg-cyan-200"
                     >
-                      {phase === "paused" ? "Resume run" : "Launch mission"}
+                      {phase === "paused" ? "Reprendre la course" : "Lancer la mission"}
                     </button>
                     {phase === "ended" ? (
                       <button
@@ -3205,7 +3205,7 @@ export default function App() {
                         onClick={startGame}
                         className="rounded-full border border-white/15 px-5 py-2 text-xs font-semibold text-slate-100 transition hover:border-cyan-300/50"
                       >
-                        Retry same boat
+                        Réessayer avec ce bateau
                       </button>
                     ) : null}
                     <button
@@ -3213,7 +3213,7 @@ export default function App() {
                       onClick={() => setShowRules(true)}
                       className="rounded-full border border-white/15 px-5 py-2 text-xs font-semibold text-slate-100 transition hover:border-cyan-300/50"
                     >
-                      Rules
+                      Règles
                     </button>
                   </div>
                 </div>
@@ -3223,10 +3223,10 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:hidden">
-            <ControlButton label="Port" sublabel="Hold A" onHold={(pressed) => setInput("left", pressed)} />
-            <ControlButton label="Starboard" sublabel="Hold D" onHold={(pressed) => setInput("right", pressed)} />
-            <ControlButton label="Throttle" sublabel="Hold W" onHold={(pressed) => setInput("up", pressed)} />
-            <ControlButton label="Fire" sublabel="Space" onHold={(pressed) => setInput("fire", pressed)} />
+            <ControlButton label="Bâbord" sublabel="Maintenir A" onHold={(pressed) => setInput("left", pressed)} />
+            <ControlButton label="Tribord" sublabel="Maintenir D" onHold={(pressed) => setInput("right", pressed)} />
+            <ControlButton label="Gaz" sublabel="Maintenir W" onHold={(pressed) => setInput("up", pressed)} />
+            <ControlButton label="Tir" sublabel="Espace" onHold={(pressed) => setInput("fire", pressed)} />
           </div>
         </section>
 
@@ -3244,25 +3244,25 @@ export default function App() {
               onClick={startGame}
               className="rounded-full border border-white/15 px-5 py-3 text-sm font-semibold text-slate-100 transition hover:border-cyan-300/50"
             >
-              Restart
+              Redémarrer
             </button>
           </div>
 
           <div className="rounded-3xl border border-white/10 bg-slate-900/45 p-4">
-            <p className="text-xs uppercase tracking-[0.32em] text-cyan-300">Cockpit</p>
+            <p className="text-xs uppercase tracking-[0.32em] text-cyan-300">Poste de pilotage</p>
             <div className="mt-4 space-y-4">
-              <Meter label="Fuel" value={metrics.fuel} tone={metrics.fuel < 24 ? "rose" : "amber"} warning={metrics.fuel < 20} />
-              <Meter label="Hull" value={metrics.hull} tone={metrics.hull < 30 ? "rose" : "green"} />
-              <Meter label="Throttle" value={metrics.throttle * 100} tone="cyan" />
-              {metrics.shield > 0 ? <Meter label="Shield" value={(metrics.shield / 6) * 100} tone="cyan" /> : null}
+              <Meter label="Carburant" value={metrics.fuel} tone={metrics.fuel < 24 ? "rose" : "amber"} warning={metrics.fuel < 20} />
+              <Meter label="Coque" value={metrics.hull} tone={metrics.hull < 30 ? "rose" : "green"} />
+              <Meter label="Gaz" value={metrics.throttle * 100} tone="cyan" />
+              {metrics.shield > 0 ? <Meter label="Bouclier" value={(metrics.shield / 6) * 100} tone="cyan" /> : null}
               <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-slate-400">
                 <span>Mines</span>
                 <span className="font-semibold text-slate-100">{metrics.mineCount}</span>
               </div>
               {metrics.turretActive ? (
                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em]">
-                  <span className="text-teal-300">Turret</span>
-                  <span className="font-semibold text-teal-200">ACTIVE</span>
+                  <span className="text-teal-300">Tourelle</span>
+                  <span className="font-semibold text-teal-200">ACTIVÉE</span>
                 </div>
               ) : null}
             </div>
@@ -3270,7 +3270,7 @@ export default function App() {
 
           <div className="rounded-3xl border border-white/10 bg-slate-900/45 p-4">
             <div className="flex items-center justify-between">
-              <p className="text-xs uppercase tracking-[0.32em] text-cyan-300">Armament</p>
+              <p className="text-xs uppercase tracking-[0.32em] text-cyan-300">Armement</p>
               <span className={`text-xs font-bold uppercase tracking-[0.22em] ${weaponColor(metrics.weapon)}`}>
                 {weaponLabel(metrics.weapon)}
               </span>
@@ -3280,7 +3280,7 @@ export default function App() {
                 {metrics.weapon === "cannon" ? "∞" : metrics.ammo}
               </p>
               <p className="text-xs uppercase tracking-[0.22em] text-slate-400">
-                {metrics.weapon === "cannon" ? "rounds" : "rounds left"}
+                {metrics.weapon === "cannon" ? "obus" : "obus restants"}
               </p>
             </div>
           </div>
@@ -3295,7 +3295,7 @@ export default function App() {
                   : "border-white/10 bg-slate-900/40 text-slate-500"
               }`}
             >
-              {musicOn ? "Music ON" : "Music OFF"}
+              {musicOn ? "Musique : oui" : "Musique : non"}
             </button>
             <button
               type="button"
@@ -3306,7 +3306,7 @@ export default function App() {
                   : "border-white/10 bg-slate-900/40 text-slate-500"
               }`}
             >
-              {sfxOn ? "SFX ON" : "SFX OFF"}
+              {sfxOn ? "Effets : oui" : "Effets : non"}
             </button>
           </div>
 
@@ -3316,42 +3316,42 @@ export default function App() {
               <p className="mt-1 text-2xl font-semibold text-white">{formatScore(metrics.score)}</p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-900/45 p-4">
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Speed</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Vitesse</p>
               <p className="mt-1 text-2xl font-semibold text-white">{Math.round(metrics.speed / 2.2)} kt</p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-900/45 p-4">
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Range</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Distance</p>
               <p className="mt-1 text-2xl font-semibold text-white">{Math.round(metrics.distance)} m</p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-slate-900/45 p-4">
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Bridges</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-slate-400">Ponts</p>
               <p className="mt-1 text-2xl font-semibold text-white">{metrics.bridges}</p>
             </div>
           </div>
 
           <div className="rounded-3xl border border-cyan-300/15 bg-cyan-950/20 p-4">
-            <p className="text-xs uppercase tracking-[0.32em] text-cyan-300">Real controls</p>
+            <p className="text-xs uppercase tracking-[0.32em] text-cyan-300">Commandes</p>
             <div className="mt-3 space-y-2 text-sm leading-6 text-slate-300">
-              <p>W or Up: add throttle. S or Down: backwater and reduce speed.</p>
-              <p>A/D or arrows: hold rudder to port or starboard. Shift: precision steering.</p>
-              <p>Space: cannon (hold for auto-fire). Q: toggle turret aim. E: drop mine.</p>
-              <p>P: pause. R: restart. Enter: launch.</p>
+              <p>W ou Haut : augmenter les gaz. S ou Bas : marche arrière et ralentir.</p>
+              <p>A/D ou flèches : maintenir le gouvernail à bâbord ou à tribord. Maj : direction précise.</p>
+              <p>Espace : canon (maintenir pour le tir automatique). Q : basculer la visée tourelle. E : poser une mine.</p>
+              <p>P : pause. R : redémarrer. Entrée : lancer.</p>
             </div>
           </div>
 
           <div className="hidden grid-cols-2 gap-3 lg:grid">
-            <ControlButton label="Port" sublabel="A / Left" onHold={(pressed) => setInput("left", pressed)} />
-            <ControlButton label="Starboard" sublabel="D / Right" onHold={(pressed) => setInput("right", pressed)} />
-            <ControlButton label="Throttle" sublabel="W / Up" onHold={(pressed) => setInput("up", pressed)} />
-            <ControlButton label="Backwater" sublabel="S / Down" onHold={(pressed) => setInput("down", pressed)} />
-            <ControlButton label="Fire" sublabel="Space" onHold={(pressed) => setInput("fire", pressed)} />
-            <ControlButton label="Precision" sublabel="Shift" onHold={(pressed) => setInput("precision", pressed)} />
-            <ControlButton label="Turret" sublabel="Q toggle" onHold={(pressed) => setInput("turret", pressed)} />
-            <ControlButton label="Mine" sublabel="E drop" onHold={(pressed) => setInput("mine", pressed)} />
+            <ControlButton label="Bâbord" sublabel="A / Gauche" onHold={(pressed) => setInput("left", pressed)} />
+            <ControlButton label="Tribord" sublabel="D / Droite" onHold={(pressed) => setInput("right", pressed)} />
+            <ControlButton label="Gaz" sublabel="W / Haut" onHold={(pressed) => setInput("up", pressed)} />
+            <ControlButton label="Marche arrière" sublabel="S / Bas" onHold={(pressed) => setInput("down", pressed)} />
+            <ControlButton label="Tir" sublabel="Espace" onHold={(pressed) => setInput("fire", pressed)} />
+            <ControlButton label="Précision" sublabel="Maj" onHold={(pressed) => setInput("precision", pressed)} />
+            <ControlButton label="Tourelle" sublabel="Q basculer" onHold={(pressed) => setInput("turret", pressed)} />
+            <ControlButton label="Mine" sublabel="E poser" onHold={(pressed) => setInput("mine", pressed)} />
           </div>
 
           <p className="text-center text-[10px] uppercase tracking-[0.3em] text-slate-600">
-            Created by Geoffroy <span className="text-cyan-500/70">Hylst</span>
+            Créé par Geoffroy <span className="text-cyan-500/70">Hylst</span>
           </p>
         </aside>
       </main>
