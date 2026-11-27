@@ -3351,7 +3351,7 @@ export default function App() {
           </div>
 
           <p className="text-center text-[10px] uppercase tracking-[0.3em] text-slate-600">
-            Créé par Geoffroy <span className="text-cyan-500/70">Hylst</span>
+            Créé par Geoffroy Streit <span className="text-cyan-500/70">(Hylst)</span> avec l'aide d'une IA
           </p>
         </aside>
       </main>
